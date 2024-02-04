@@ -1,0 +1,1 @@
+BYUI Grocer Connect is a web application designed to streamline the grocery shopping process for students at Brigham Young University-Idaho. It connects students needing groceries with those already planning to shop, facilitating a community-driven approach to grocery shopping.
