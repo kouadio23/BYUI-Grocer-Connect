@@ -83,5 +83,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## 💖 Acknowledgments
 
 - BYU-I community for the inspiration.
-- Contributors who dedicate time and effort to this project.
+- Contributors who dedicate time and effort to this project..
 
