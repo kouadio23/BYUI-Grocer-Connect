@@ -23,6 +23,14 @@ BYUI Grocer Connect is a web application designed to streamline the grocery shop
 
 ## 🚀 Getting Started
 
+
+### Creating a Superuser
+
+To create a superuser for the application, navigate to the backend directory in your terminal and run the following command:
+
+
+python manage.py createsuperuser
+
 ### Prerequisites
 
 Ensure you have the following installed:
