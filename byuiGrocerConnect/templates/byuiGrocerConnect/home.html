@@ -1,20 +1,60 @@
 {% extends 'byuiGrocerConnect/base.html' %}
 
 {% block content %}
-<div class="container">
-    <h1>Welcome to byuiGrocerConnect!</h1>
-    <p>Your one-stop shop for all your grocery needs.</p>
+<div class="container py-4">
+    <h1 class="display-4">Welcome to BYUI Grocer Connect</h1>
+    <p class="lead">Your community-driven platform for grocery shopping at BYU-I.</p>
 
-    <h2>Featured Products</h2>
-    <div class="row">
-        {% for product in products %}
-        <div class="col-md-4">
-            <h3>{{ product.name }}</h3>
-            <p>{{ product.description }}</p>
-            <p>Price: {{ product.price }}</p>
-            <p>Quantity: {{ product.quantity }}</p>
+    <section class="mt-5">
+        <h2 class="h3">How It Works</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">1. Post Your List</h5>
+                        <p class="card-text">Easily submit your grocery list through our platform.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">2. Connect</h5>
+                        <p class="card-text">Match with fellow students heading to your preferred store.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">3. Shop Together</h5>
+                        <p class="card-text">Coordinate pick-up or delivery options directly.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        {% endfor %}
+    </section>
+
+    <section class="featured-products mt-5">
+    <h2 class="h3">Featured Products</h2>
+    <div class="row">
+        {% if products %}
+            {% for product in products %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="card-text">Price: ${{ product.price }}</p>
+                        <p class="card-text">Quantity available: {{ product.quantity }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No featured products at this time.</p>
+        {% endif %}
     </div>
-</div>
+</section>
 {% endblock %}
