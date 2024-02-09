@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'byuiGrocerConnect.apps.ByuigrocerconnectConfig',
 ]
 
 MIDDLEWARE = [
@@ -73,16 +74,16 @@ WSGI_APPLICATION = 'BYUIGrocer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'byui_grocer_connect',
-#         'USER': 'myprojectuser',
-#         'PASSWORD': 'password',
-#         'HOST': 'localhost',
-#         'PORT': '',  # Default port
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'byuigrocer',
+        'USER': 'postgres',
+        'PASSWORD': '@password@',
+        'HOST': 'localhost',
+        'PORT': '5432',  # Default port yep
+    }
+}
 
 
 
