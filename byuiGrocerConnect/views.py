@@ -3,4 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(response):
-    return HttpResponse("<h1>BYUI Grocer Connect</h1>")
+    return render(response, "byuiGrocerConnect/base.html", {})
+
+def home(response):
+    return render(response, "byuiGrocerConnect/home.html", {})
