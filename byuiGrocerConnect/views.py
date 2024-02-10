@@ -1,16 +1,23 @@
+from urllib import response
 from django.shortcuts import render
 from django.http import HttpResponse
 
 from byuiGrocerConnect.models import Product
 
 # Create your views here.
-def index(response):
-    return render(response, "byuiGrocerConnect/base.html", {})
+def index(request):
+    return render(request, "byuiGrocerConnect/base.html", {})
 
-def home(response):
+def home(request):
     products = Product.objects.filter(is_featured=True)  # or however you determine featured products
-    return render(response, "byuiGrocerConnect/home.html", {'products': products})
+    return render(request, "byuiGrocerConnect/home.html", {'products': products})
 
-def features(response):
+def features(request):
     products = Product.objects.filter(is_featured=True)  # or however you determine featured products
-    return render(response, "byuiGrocerConnect/features.html", {'products': products})
+    return render(request, "byuiGrocerConnect/features.html", {'products': products})
+
+def aboutUs(request):
+    return render(request, "byuiGrocerConnect/aboutUs.html", {})
+
+def contactUs(request):
+    return render(request, "byuiGrocerConnect/contactUs.html", {})
