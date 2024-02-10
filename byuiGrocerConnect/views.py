@@ -10,6 +10,7 @@ def index(request):
 
 def home(request):
     products = Product.objects.filter(is_featured=True)  # or however you determine featured products
+    # pass the products to the template
     return render(request, "byuiGrocerConnect/home.html", {'products': products})
 
 def features(request):
