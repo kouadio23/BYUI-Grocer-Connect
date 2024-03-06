@@ -1,0 +1,45 @@
+{% extends 'byuiGrocerConnect/base.html' %}
+
+{% block content %}
+<div class="container py-4">
+    <h1 class="display-4">Contact Us</h1>
+    <p class="lead">Have questions or feedback? We'd love to hear from you!</p>
+    
+    <section class="mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Contact Information</h2>
+                <p>
+                    If you have any questions or need assistance, feel free to reach out to us using the contact information below:
+                </p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:kouaokouadio@gmail.com">contact@byuigrocerconnect.com</a></li>
+                    <li><strong>Phone:</strong> +1 (208) 760 8355</li>
+                    <li><strong>Address:</strong> 123 Main Street, Rexburg, ID 83440</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Contact Form</h2>
+                <p>Alternatively, you can use the form below to send us a message:</p>
+                <!-- Your contact form goes here -->
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

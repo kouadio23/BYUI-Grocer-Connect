@@ -8,6 +8,8 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     quantity = models.IntegerField()
     description = models.TextField()
+    is_featured = models.BooleanField(default=False) # Add this line
+    image = models.ImageField(upload_to='product_images', default='default.jpg')
 
     def __str__(self):
         return self.name
@@ -50,3 +52,4 @@ class Inventory(models.Model):
 
     def __str__(self):
         return f"{self.product.name} in {self.store.name}"
+    
