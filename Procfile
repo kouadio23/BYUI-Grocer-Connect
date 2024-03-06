@@ -1,3 +1,3 @@
 process_type: command
-web: gunicorn yourapplication:app
+web: gunicorn byuiGrocerConnect:app
 web: gunicorn app:app
