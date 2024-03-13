@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qbi^39v#_&u3$5ul-!4+!#exqa2#5t^66ilv_ofkh-f@qr31wz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True ( Development environment )
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['byui-grocer-connect.herokuapp.com', 'www.byui-grocer-connect.herokuapp.com']
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
