@@ -85,9 +85,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'byuigrocer',
-        'USER': 'postgres',
-        'PASSWORD': '@password@',
-        'HOST': 'localhost',
+        'USER': 'mysuperuser',
+        'PASSWORD': '<ibexcontrols>',
+        'HOST': 'byuigrocer.c1o8iok4ky1z.us-east-2.rds.amazonaws.com',
         'PORT': '5432',  # Default port yep
     }
 }
