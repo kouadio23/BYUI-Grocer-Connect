@@ -75,7 +75,10 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'BYUIGrocer.wsgi.application'
+# WSGI_APPLICATION = 'BYUIGrocer.wsgi.application'
+ASGI_APPLICATION = 'BYUIGrocer.asgi.application'
+
+
 
 
 # Database
