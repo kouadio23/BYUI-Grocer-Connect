@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'byuigrocer',
         'USER': 'postgres',
-        'PASSWORD': '<ibexcontrols>',
+        'PASSWORD': '@password@',
         'HOST': 'localhost',
         'PORT': '5432',  # Default port yep
     }
