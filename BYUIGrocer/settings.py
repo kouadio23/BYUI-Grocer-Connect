@@ -22,8 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-qbi^39v#_&u3$5ul-!4+!#exqa2#5t^66ilv_ofkh-f@qr31wz'
-
+# SECRET_KEY = 'django-insecure-qbi^39v#_&u3$5ul-!4+!#exqa2#5t^66ilv_ofkh-f@qr31wz'
+SECRET_KEY = ('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True ( Development environment )
 DEBUG = True
@@ -98,16 +98,21 @@ ASGI_APPLICATION = 'BYUIGrocer.asgi.application'
 # }
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),  # This may not be 'localhost' on Appliku
-        'PORT': config('DB_PORT', default='5432'),  # Default port for PostgreSQL
+if os.environ.get('DATABASE_URL'):
+    DATABASES = {
+        'default': os.environ.get('DATABASE_URL')
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ.get('DB_NAME'),
+            'USER': os.environ.get('DB_USER', default='postgres'),
+            'PASSWORD': os.environ.get('DB_PASSWORD'),
+            'HOST': os.environ.get('DB_HOST', default='localhost'),
+            'PORT': os.environ.get('DB_PORT', default='5432')
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
