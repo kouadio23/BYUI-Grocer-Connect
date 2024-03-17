@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 from decouple import config
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -98,9 +99,27 @@ ASGI_APPLICATION = 'BYUIGrocer.asgi.application'
 # }
 
 
+# if os.environ.get('DATABASE_URL'):
+#     DATABASES = {
+#         'default': os.environ.get('DATABASE_URL')
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': os.environ.get('DB_NAME'),
+#             'USER': os.environ.get('DB_USER', default='postgres'),
+#             'PASSWORD': os.environ.get('DB_PASSWORD', default='@password@'),
+#             'HOST': os.environ.get('DB_HOST', default='localhost'),
+#             'PORT': os.environ.get('DB_PORT', default='5432')
+#         }
+#     }
+
+
+
 if os.environ.get('DATABASE_URL'):
     DATABASES = {
-        'default': os.environ.get('DATABASE_URL')
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
@@ -113,6 +132,9 @@ else:
             'PORT': os.environ.get('DB_PORT', default='5432')
         }
     }
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
