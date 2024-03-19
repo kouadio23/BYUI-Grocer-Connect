@@ -174,7 +174,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     # Additional static files directory within the project
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'byuiGrocerConnect/static'),
     
 ]
 
