@@ -17,8 +17,6 @@ import dj_database_url
 
 
 
-# Load the environment variables from the .env file.
-load_dotenv()
 
 # Define the base directory of your Django project
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
