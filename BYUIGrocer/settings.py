@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 from decouple import config
 import dj_database_url
-from dotenv import load_dotenv
+
 
 
 # Load the environment variables from the .env file.
