@@ -17,7 +17,7 @@ import dj_database_url
 from dotenv import load_dotenv
 
 
-# Load the environment variables from the .env file
+# Load the environment variables from the .env file.
 load_dotenv()
 
 # Define the base directory of your Django project
