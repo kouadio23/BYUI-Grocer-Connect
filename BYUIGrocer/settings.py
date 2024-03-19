@@ -22,7 +22,7 @@ load_dotenv()
 
 # Define the base directory of your Django project
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the project like this: BASE_DIR / 'subdir'...
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
