@@ -1,7 +1,8 @@
 {
      "name": "byuigrocer",      
-    "user": "postgres",       
-    "password": "@password@",  
-    "ipAddress": "localhost",             
+    "user": "superuser",       
+    "password": "byuiGrocerkkf",  
+    "ipAddress": "byuigrocer.c1o8iok4ky1z.us-east-2.rds.amazonaws.com",             
     "port": 5432 
 }
+
