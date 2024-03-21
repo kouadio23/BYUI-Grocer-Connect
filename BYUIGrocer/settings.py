@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'byuiGrocerConnect.apps.ByuigrocerconnectConfig',
-    'django_extensions',
+    # 'django_extensions',
 ]
 
 MIDDLEWARE = [
