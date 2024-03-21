@@ -37,6 +37,12 @@ DEBUG = os.environ.get('DEBUG', default=True)  == 'True'
 
 ALLOWED_HOSTS = ['*']
 
+# HTTPS settings
+CSRF_COOKIE_SECURE = os.environ.get('CSRF_COOKIE_SECURE', default='True') == 'True'
+SESSION_COOKIE_SECURE = os.environ.get('SESSION_COOKIE_SECURE', default='True') == 'True'
+SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT', default='True') == 'True'
+
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
